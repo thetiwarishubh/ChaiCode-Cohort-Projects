@@ -10,6 +10,7 @@ btn.addEventListener("click", () => {
     if (!bulbColor) {
         body.style.backgroundColor = "#212121"
         bulb.style.backgroundColor = "#FFFF00";
+        bulb.style.boxShadow = "0 0 80px 4px #ffff00"
         heading.style.color = "#fff";
         subHeading.style.color = "#fff";
         statusText.style.color = "#fff";
@@ -19,6 +20,7 @@ btn.addEventListener("click", () => {
     } else {
         body.style.backgroundColor = "";
         bulb.style.backgroundColor = "";
+        bulb.style.boxShadow = ""
         heading.style.color = "";
         subHeading.style.color = "";
         statusText.style.color = "";
