@@ -37,8 +37,6 @@ const completeTasksCount = function () {
 };
 const completeTasks = completeTasksCount();
 
-const completedTasksCount = function () {};
-
 const addTask = function () {
   const inputValue = input.value.trim();
   if (!inputValue) return alert(`Please enter a task`);
@@ -60,7 +58,7 @@ const addTask = function () {
       tasks.decrement();
     } else {
       tasks.increment();
-      completeTasks.decrement()
+      completeTasks.decrement();
     }
   });
 
@@ -71,19 +69,17 @@ const addTask = function () {
   const deleteButton = document.createElement("button");
   deleteButton.setAttribute("class", "delete-button");
   deleteButton.textContent = "delete";
-  deleteButton.addEventListener("click", (e)=> {
-    if(e.target.parentElement){
+  deleteButton.addEventListener("click", (e) => {
+    if (e.target.parentElement) {
       li.remove();
-      tasks.decrement()
-
+      tasks.decrement();
     }
-  })
+  });
 
   const emptyTasklist = document.querySelector(".empty-list");
   if (emptyTasklist) {
     emptyTasklist.remove();
   } else {
-
   }
 
   li.append(checkBox);
