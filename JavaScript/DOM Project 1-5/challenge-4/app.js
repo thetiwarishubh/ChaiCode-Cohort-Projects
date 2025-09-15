@@ -37,8 +37,6 @@ const completeTasksCount = function () {
 };
 const completeTasks = completeTasksCount();
 
-const deleteTask = function () {};
-
 const completedTasksCount = function () {};
 
 const addTask = function () {
