@@ -62,6 +62,7 @@ const addTask = function () {
     }
   });
 
+  //Create checkbox
   checkBox.setAttribute("type", "checkbox");
   checkBox.setAttribute("class", "complete-checkbox");
 
@@ -76,12 +77,14 @@ const addTask = function () {
     }
   });
 
+  //select default li
   const emptyTasklist = document.querySelector(".empty-list");
   if (emptyTasklist) {
     emptyTasklist.remove();
   } else {
   }
 
+  //append all element
   li.append(checkBox);
   li.append(span);
   span.textContent = inputValue;
@@ -92,3 +95,5 @@ const addTask = function () {
 };
 
 addBtn.addEventListener("click", addTask);
+
+// I'm going to rewrite this code and also write an optimized version of it.
