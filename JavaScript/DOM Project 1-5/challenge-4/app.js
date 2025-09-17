@@ -33,6 +33,20 @@ const completedTasks = function () {
   };
 };
 
+const addTaskContainer = function(){
+  const noTaskMessage = document.createElement("li");
+  noTaskMessage.setAttribute("class", "empty-list");
+  noTaskMessage.textContent= `No tasks yet. Add one above!`
+  taskContainers.appendChild(noTaskMessage);
+}
+
+const removeMessage = function(){
+  const liMessage = document.querySelector(".empty-list");
+  if(liMessage){
+    liMessage.remove()
+  }
+}
+
 const completedTasksUpdate = completedTasks();
 
 const addTask = function () {
@@ -75,6 +89,8 @@ const addTask = function () {
           completedTasksUpdate.decrement();
         } else {
           totalTasksUpdate.decrement();
+        }if(taskContainers.children.length === 0){
+          addTaskContainer()
         }
       }
     });
@@ -82,6 +98,7 @@ const addTask = function () {
     taskContainers.appendChild(li);
 
     totalTasksUpdate.increment();
+    removeMessage()
   }
 
   inputTask.value = "";
