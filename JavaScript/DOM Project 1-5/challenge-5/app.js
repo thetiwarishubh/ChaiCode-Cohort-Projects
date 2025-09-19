@@ -16,3 +16,15 @@ const images = [
     caption: 'Urban City Skyline',
   },
 ];
+
+const showImages = document.getElementById("carouselTrack");
+const prevBtn = document.getElementById("prevButton");
+const nextBtn = document.getElementById("nextButton");
+const caption = document.getElementById("caption");
+const indicators = document.getElementById("carouselNav");
+const autoPlayButton = document.getElementById("autoPlayButton");
+const timerDisplay = document.getElementById("timerDisplay")
+
+const slideImages = function(){
+  
+}
