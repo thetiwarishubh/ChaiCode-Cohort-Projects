@@ -23,8 +23,4 @@ const nextBtn = document.getElementById("nextButton");
 const caption = document.getElementById("caption");
 const indicators = document.getElementById("carouselNav");
 const autoPlayButton = document.getElementById("autoPlayButton");
-const timerDisplay = document.getElementById("timerDisplay")
-
-const slideImages = function(){
-  
-}
+const timerDisplay = document.getElementById("timerDisplay");
