@@ -1,3 +1,2 @@
-/**
- * Write your challenge solution here
- */
+const date = document.querySelector(".date")
+const digitalClock = document.querySelector(".digital-clock")

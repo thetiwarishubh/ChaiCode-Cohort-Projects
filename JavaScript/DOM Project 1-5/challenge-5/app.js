@@ -24,3 +24,5 @@ const caption = document.getElementById("caption");
 const indicators = document.getElementById("carouselNav");
 const autoPlayButton = document.getElementById("autoPlayButton");
 const timerDisplay = document.getElementById("timerDisplay");
+
+
