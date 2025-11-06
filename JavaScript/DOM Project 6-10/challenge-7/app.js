@@ -1,3 +1,1 @@
-/**
- * Write your challenge solution here
- */
+const accordionButton = document.querySelector('.accordion-button')
