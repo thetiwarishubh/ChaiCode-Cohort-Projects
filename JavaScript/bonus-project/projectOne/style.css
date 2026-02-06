@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101426;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: inline-block;
+    background-color: #222b45;
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+.container h1 {
+    color : #02ed6c;
+    font-size: 48px;
+}
+
+.container p {
+    color: #ffffff66;
+    text-align: center;
+    font-size: 20px;
+}
