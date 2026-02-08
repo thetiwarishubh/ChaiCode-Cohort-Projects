@@ -2,25 +2,41 @@ const input = document.getElementById("seconds");
 const btn = document.querySelector("button");
 const display = document.querySelector(".display");
 
+let intervalId = null;
+let timeLeft = 0;
+let isRunning = false;
+
 const timerFunction = () => {
-  let inputValue = input.value;
-  if (inputValue === "") {
-    alert(`Please Enter time in seconds`);
-  } else {
-    setInterval(() => {
-      inputValue--;
-      if (inputValue > 0) {
-        display.textContent = `Time remaining : ${inputValue + 1}`;
-        btn.textContent = `Stop Countdown`;
-        btn.disabled = true
-      } else {
-        display.textContent = `Timer up⏰!`;
+  if (!isRunning) {
+    if (timeLeft === 0) {
+      if (input.value === "") {
+        alert("Please enter time in seconds");
+        return;
+      }
+      timeLeft = Number(input.value);
+    }
+
+    isRunning = true;
+    btn.textContent = "Stop Countdown";
+
+    intervalId = setInterval(() => {
+      display.textContent = `Time remaining: ${timeLeft}s`;
+      timeLeft--;
+
+      if (timeLeft < 0) {
+        clearInterval(intervalId);
+        display.textContent = "Timer up ⏰!";
+        btn.textContent = "Start Countdown";
         input.value = "";
-        setTimeout(() => {
-          window.location.reload();
-        }, 5000);
+        timeLeft = 0;
+        isRunning = false;
       }
     }, 1000);
+  } else {
+    // STOP / PAUSE
+    clearInterval(intervalId);
+    isRunning = false;
+    btn.textContent = "Resume Countdown";
   }
 };
 
