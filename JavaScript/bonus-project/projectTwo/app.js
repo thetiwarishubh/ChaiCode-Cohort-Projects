@@ -12,7 +12,7 @@ const timerFunction = () => {
       if (inputValue > 0) {
         display.textContent = `Time remaining : ${inputValue + 1}`;
         btn.textContent = `Stop Countdown`;
-        input.value = "";
+        btn.disabled = true
       } else {
         display.textContent = `Timer up⏰!`;
         input.value = "";
